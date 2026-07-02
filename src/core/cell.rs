@@ -13,7 +13,7 @@ impl Cell {
         matches!(self, Cell::Dead)
     }
 
-    pub fn next_state(&self, neighbors: usize) -> Cell {
+    pub fn next_state(&self, neighbors: u8) -> Cell {
         if self.is_alive() {
             match neighbors {
                 2 | 3 => Cell::Alive,
